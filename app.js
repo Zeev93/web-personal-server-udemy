@@ -1,8 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 require('dotenv').config({path: '.env' })
+const cors = require('cors')
 
 const app = express()
+app.use(cors())
 
 
 // TODO: Load Routing
