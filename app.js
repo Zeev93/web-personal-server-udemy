@@ -8,6 +8,7 @@ app.use(cors())
 
 
 // TODO: Load Routing
+const authRoutes = require('./routers/auth')
 const userRoutes = require('./routers/user')
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -17,6 +18,7 @@ app.use(bodyParser.json())
 // TODO:Configure Header HTTP
 
 // TODO: Router Basic 
+app.use('/api', authRoutes)
 app.use(`/api`, userRoutes)
 
 

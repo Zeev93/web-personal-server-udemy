@@ -67,7 +67,7 @@ function signIn(req, res){
                             res.status(200).send({code: 200, message: "El usuario no esta activo"})
                         }else{
                             res.status(200).send({ 
-                                accesToken: jwt.createAccessToken(userStored),
+                                accessToken: jwt.createAccessToken(userStored),
                                 refreshToken: jwt.createRefreshToken(userStored)
                              })
                         }
